@@ -44,7 +44,8 @@ function updateOrder() {
   } else {
     applyButton.setAttribute("disabled", "true");
   }
-  // clear the shoppings list
+  // clear the shoppings list and coupon code
+  const couponText = document.getElementById("coupon-input");
   const purchaseButton = document.getElementById("purchase-btn");
   const clear = document.getElementById("clear-cart");
   if (itemList.length > 0) {
@@ -52,6 +53,8 @@ function updateOrder() {
     clear.addEventListener("click", function () {
       my_modal_1.showModal();
       itemList.length = 0;
+      couponText.value = "";
+      coupon = false;
       updateOrder();
     });
   } else {
