@@ -19,6 +19,7 @@
     />
   </head>
   <body>
+    <!-- header section -->
     <header class="bg-[#F9F6E2] md:h-[400px] lg:h-[650px]">
       <div
         class="w-[90%] lg:w-[80%] mx-auto pt-6 md:pt-10 lg:pt-8 items-center flex justify-center lg:justify-around flex-col md:flex-row"
@@ -47,6 +48,7 @@
         </div>
       </div>
     </header>
+    <!-- main section -->
     <main class="mt-16 lg:mt-20 w-10/12 mx-auto mb-16 lg:mb-20">
       <h3 class="text-[#111] text-left font-semibold text-3xl lg:text-4xl mb-8">
         Kitchenware
@@ -499,16 +501,39 @@
           >
             Apply
           </button>
+          <!-- add area section -->
           <div
             class="mt-8 text-xl pl-4 text-[#111] font-medium"
             id="add-area"
           ></div>
           <button
+            onclick="my_modal_1.showModal()"
             id="purchase-btn"
             class="btn btn-primary mx-auto mt-8 bg-[#E527B2] h-12 text-white text-lg font-semibold border-none hidden"
           >
             Make Purchase
           </button>
+          <!-- go home button -->
+          <dialog id="my_modal_1" class="modal">
+            <form method="dialog" class="modal-box">
+              <div
+                class="w-[250px] lg:w-[320px] h-[250px] lg:h-[320px] mx-auto"
+              >
+                <img class="w-11/12" src="images/congo.png" alt="" />
+                <p class="text-lg text-center mb-3 mt-3 text-[#555]">
+                  Your Purchase the product
+                </p>
+              </div>
+              <div class="modal-action">
+                <button
+                  id="clear-cart"
+                  class="btn btn-primary mt-3 mx-auto bg-[#E527B2] text-white text-lg lg:text-xl font-semibold border-none"
+                >
+                  Go Home
+                </button>
+              </div>
+            </form>
+          </dialog>
         </div>
       </div>
     </main>
